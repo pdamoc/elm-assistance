@@ -1,4 +1,4 @@
-module Counter exposing (..)
+module Counter exposing (Model, Msg, init, update, view)
 
 import Html exposing (Html)
 
@@ -8,13 +8,14 @@ import Html exposing (Html)
 import Counter.Model as Model
 import Counter.Update as Update
 import Counter.View as View
+import Counter.Types as Types
 
 
 -- MODEL
 
 
 type alias Model =
-    Model.Model
+    Types.Model
 
 
 init : Int -> Model
@@ -27,7 +28,7 @@ init =
 
 
 type alias Msg =
-    Update.Msg
+    Types.Msg
 
 
 update : Msg -> Model -> Model

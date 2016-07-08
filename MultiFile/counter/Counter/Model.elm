@@ -1,8 +1,6 @@
-module Counter.Model exposing (Model, init)
+module Counter.Model exposing (init)
 
-
-type alias Model =
-    Int
+import Counter.Types exposing (..)
 
 
 init : Int -> Model

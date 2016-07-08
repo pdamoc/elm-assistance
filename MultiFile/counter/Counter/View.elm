@@ -3,12 +3,7 @@ module Counter.View exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (style)
 import Html.Events exposing (onClick)
-
-
--- TYPE IMPORTS
-
-import Counter.Model exposing (Model)
-import Counter.Update exposing (Msg(..))
+import Counter.Types exposing (..)
 
 
 view : Model -> Html Msg

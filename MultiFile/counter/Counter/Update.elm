@@ -1,11 +1,6 @@
-module Counter.Update exposing (update, Msg(..))
+module Counter.Update exposing (update)
 
-import Counter.Model exposing (Model)
-
-
-type Msg
-    = Increment
-    | Decrement
+import Counter.Types exposing (..)
 
 
 update : Msg -> Model -> Model
