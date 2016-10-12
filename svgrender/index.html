@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="UTF-8"><title>Main</title><style>html,head,body { padding:0; margin:0; }
+body { font-family: calibri, helvetica, arial, sans-serif; }</style>
+<script type="text/javascript" src="elm.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+
+    var app = Elm.Main.fullscreen();
+
+    app.ports.requestString.subscribe(function(id) { 
+        app.ports.receiveString.send(document.getElementById(id).innerHTML);
+    });
+
+</script>
+</body></html>
