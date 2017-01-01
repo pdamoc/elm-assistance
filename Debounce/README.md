@@ -1,3 +1,3 @@
-# Debounce in 0.17
+# Debounce in 0.18
 
 How to debounce some action.

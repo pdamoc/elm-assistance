@@ -1,15 +1,14 @@
 module Main exposing (..)
 
 import Html exposing (..)
-import Html.App as App
 import Html.Events as E
 import Time exposing (Time, second)
 import Debounce exposing (bounce)
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    App.program
+    program
         { init = ( init, Cmd.none )
         , update = \msg mdl -> ( update msg mdl, Cmd.none )
         , view = view
