@@ -1,8 +1,10 @@
-import Html.App as Html
+module Main exposing (..)
 
-import Counter exposing (update, view)
+import Html
+import Counter exposing (update, view, Msg)
 
-main : Program Never
+
+main : Program Never Int Msg
 main =
-  Html.beginnerProgram
-    { model = 0, update = update, view = view}
+    Html.beginnerProgram
+        { model = 0, update = update, view = view }
