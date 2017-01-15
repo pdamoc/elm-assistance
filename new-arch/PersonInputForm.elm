@@ -1,4 +1,4 @@
-module Form exposing (..)
+module PersonInputForm exposing (..)
 
 import Html exposing (Html, div, input, button, text)
 import Html.Attributes exposing (placeholder, value, type_)

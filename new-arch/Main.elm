@@ -1,13 +1,13 @@
 module Main exposing (..)
 
 import Html exposing (..)
-import Form
+import PersonInputForm exposing (PersonInput, personInputForm)
 
 
 main : Program Never Model Msg
 main =
     program
-        { init = ( Model Form.init Nothing, Cmd.none )
+        { init = ( Model PersonInputForm.init Nothing, Cmd.none )
         , update = update
         , view = view
         , subscriptions = \_ -> Sub.none
@@ -15,13 +15,13 @@ main =
 
 
 type alias Model =
-    { form : Form.PersonInput
-    , submitted : Maybe Form.PersonInput
+    { form : PersonInput
+    , submitted : Maybe PersonInput
     }
 
 
 type Msg
-    = FormUpdate Form.PersonInput
+    = FormUpdate PersonInput
     | Submit
 
 
@@ -38,7 +38,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ Form.personInputForm { onUpdate = FormUpdate, onSubmit = Submit } model.form
+        [ personInputForm { onUpdate = FormUpdate, onSubmit = Submit } model.form
         , case model.submitted of
             Nothing ->
                 div [] [ text "Enter something in the form and submit" ]
