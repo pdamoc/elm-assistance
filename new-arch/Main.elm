@@ -1,13 +1,13 @@
 module Main exposing (..)
 
 import Html exposing (..)
-import PersonInputForm exposing (PersonInput, personInputForm)
+import PersonInputFormB exposing (PersonInput, personInputForm)
 
 
 main : Program Never Model Msg
 main =
     program
-        { init = ( Model PersonInputForm.init Nothing, Cmd.none )
+        { init = ( Model PersonInputFormB.init Nothing, Cmd.none )
         , update = update
         , view = view
         , subscriptions = \_ -> Sub.none
