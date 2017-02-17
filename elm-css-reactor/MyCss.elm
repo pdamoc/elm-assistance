@@ -1,7 +1,7 @@
 module MyCss exposing (..)
 
 import Css exposing (..)
-import Css.Elements exposing (body, li, ul)
+import Css.Elements exposing (..)
 import Css.Namespace exposing (namespace)
 
 
@@ -43,6 +43,7 @@ css =
                     , color primaryAccentColor
                     , paddingLeft (px 5)
                     ]
+                , a [ color primaryAccentColor ]
                 ]
             ]
         ]

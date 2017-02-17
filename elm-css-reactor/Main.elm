@@ -1,6 +1,7 @@
 module Main exposing (..)
 
-import Html exposing (Html)
+import Html exposing (..)
+import Html.Attributes exposing (href)
 import Html.CssHelpers
 import MyCss exposing (..)
 import Utils exposing (withCss)
@@ -12,14 +13,15 @@ import Utils exposing (withCss)
 
 main : Html msg
 main =
-    Html.div []
-        [ Html.div [ class [ NavBar ] ]
-            [ Html.ul []
-                [ Html.li [] [ Html.text "About" ]
-                , Html.li [] [ Html.text "Contact" ]
+    div []
+        [ div [ class [ NavBar ] ]
+            [ ul []
+                [ li [] [ text " Welcome to the NavBar " ]
+                , li [] [ a [ href "#" ] [ text "About" ] ]
+                , li [] [ a [ href "#" ] [ text "Contact" ] ]
                 ]
             ]
-        , Html.div [ id Page ] [ Html.text "this has the Page id" ]
+        , div [ id Page ] [ text "this has the Page id" ]
         ]
         |> withCss css
 
